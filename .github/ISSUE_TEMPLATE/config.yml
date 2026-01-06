@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+
+contact_links:
+  - name: 💬 Discord Community
+    url: https://discord.gg/guardrail
+    about: Get help and chat with the community
+
+  - name: 📖 Documentation
+    url: https://getguardrail.io/docs
+    about: Check the docs for answers
+
+  - name: 🔒 Security Issues
+    url: https://github.com/Guardrail-Official/guardrail/security/advisories/new
+    about: Report security vulnerabilities privately

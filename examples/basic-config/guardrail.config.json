@@ -1,0 +1,30 @@
+{
+  "version": "2.0.0",
+  "checks": ["integrity", "security", "hygiene"],
+  "output": ".guardrail",
+  "policy": {
+    "failOn": ["critical", "high"],
+    "threshold": 80,
+    "allowlist": {
+      "domains": ["api.stripe.com", "api.github.com"],
+      "paths": ["tests/**", "**/*.test.*", "**/*.spec.*"]
+    },
+    "ignore": {
+      "paths": ["node_modules", "dist", ".next", "build", "coverage"]
+    }
+  },
+  "profiles": {
+    "quick": {
+      "checks": ["integrity"],
+      "policy": { "threshold": 70 }
+    },
+    "full": {
+      "checks": ["integrity", "security", "hygiene", "contracts"],
+      "policy": { "threshold": 80 }
+    },
+    "ship": {
+      "checks": ["integrity", "security", "hygiene", "contracts", "mocks"],
+      "policy": { "threshold": 90 }
+    }
+  }
+}
